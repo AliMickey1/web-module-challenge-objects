@@ -15,10 +15,10 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-
-function createMenuItem(/*Your code here*/){
-  /*Your code here*/
+function createMenuItem(name, price, category){
+  return {name, price, category};
 }
+console.log(createMenuItem['tacos',8,'Lunch']);
 
 
 
@@ -32,6 +32,10 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
+
+console.log(createMenuItem('pizza',5,'dinner'));
+console.log(createMenuItem('Tacos',2,'lunch'));
+console.log(createMenuItem('waffles',3,'breakfast'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -53,7 +57,19 @@ const burger = {
   category: "Lunch", 
   
 }
+burger.discount = '0.25';
 
+function discountTypes (string) {
+  if(string === 'teacher' || string === 'student')
+    {
+     return (burger.price * 0.75);
+     }
+  else if (string === 'public')
+    {
+      return (burger.price * .90)
+    }
+}
+console.log(discountTypes('teacher'));
 
 
 ///////////////Reviews (MVP)///////////////////
@@ -73,6 +89,7 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
+console.log(reviews[5].feedback);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -81,6 +98,9 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   2. log the reviews array to the console to check your work
 */
 
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+
+console.log(reviews[7].feedback);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -95,10 +115,16 @@ Use the addReview function below to do the following:
 */
 
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
-}
-
+function addReview(array,name1,rating1,feedback1){
+  
+    array.push({name: name1, rating: rating1, feedback: feedback1});
+   
+  }
+  
+  addReview(reviews, 'Billy', 2, 'Lame Food');
+  
+  console.log(reviews);
+  
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
